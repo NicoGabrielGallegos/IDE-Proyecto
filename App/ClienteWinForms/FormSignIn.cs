@@ -38,6 +38,7 @@ namespace ClienteWinForms
                 usuario.FechaNacimiento = DateOnly.FromDateTime(dateFechaNacimiento.Value);
                 usuario.Clave = txtPass0.Text;
                 await UsuarioNegocio.Add(usuario);
+                new FormLogin().Show();
                 Close();
             }
         }

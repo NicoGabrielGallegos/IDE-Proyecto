@@ -52,7 +52,6 @@
             // 
             txtDireccion.Location = new Point(12, 199);
             txtDireccion.Name = "txtDireccion";
-            txtDireccion.PasswordChar = '*';
             txtDireccion.Size = new Size(160, 23);
             txtDireccion.TabIndex = 4;
             // 
