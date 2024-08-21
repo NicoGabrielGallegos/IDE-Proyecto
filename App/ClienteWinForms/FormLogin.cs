@@ -32,7 +32,7 @@ namespace ClienteWinForms
 
             if (usuario.Clave == txtPassword.Text)
             {
-                new FormGestionAlumnos().Show();
+                new FormSeleccionarPerfil(usuario).Show();
                 Close();
             }
         }

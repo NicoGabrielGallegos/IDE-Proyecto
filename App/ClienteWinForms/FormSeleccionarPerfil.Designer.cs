@@ -38,7 +38,9 @@
             activadoDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
             perfilBindingSource = new BindingSource(components);
             btnIngresar = new Button();
-            button1 = new Button();
+            btnCerrarSesion = new Button();
+            lblWelcome = new Label();
+            btnCrearPerfil = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)perfilBindingSource).BeginInit();
             SuspendLayout();
@@ -52,10 +54,10 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idPerfilDataGridViewTextBoxColumn, dNIDataGridViewTextBoxColumn, tipoPerfilDataGridViewTextBoxColumn, legajoDataGridViewTextBoxColumn, idEspecialidadDataGridViewTextBoxColumn, activadoDataGridViewCheckBoxColumn });
             dataGridView1.DataSource = perfilBindingSource;
-            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Location = new Point(0, 32);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(800, 393);
+            dataGridView1.Size = new Size(800, 361);
             dataGridView1.TabIndex = 0;
             // 
             // idPerfilDataGridViewTextBoxColumn
@@ -107,29 +109,52 @@
             // btnIngresar
             // 
             btnIngresar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnIngresar.Location = new Point(118, 406);
+            btnIngresar.Location = new Point(123, 406);
             btnIngresar.Name = "btnIngresar";
             btnIngresar.Size = new Size(75, 32);
             btnIngresar.TabIndex = 1;
             btnIngresar.Text = "Ingresar";
             btnIngresar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCerrarSesion
             // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            button1.Location = new Point(12, 406);
-            button1.Name = "button1";
-            button1.Size = new Size(100, 32);
-            button1.TabIndex = 2;
-            button1.Text = "Cerrar Sesión";
-            button1.UseVisualStyleBackColor = true;
+            btnCerrarSesion.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnCerrarSesion.Location = new Point(12, 406);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(100, 32);
+            btnCerrarSesion.TabIndex = 2;
+            btnCerrarSesion.Text = "Cerrar Sesión";
+            btnCerrarSesion.UseVisualStyleBackColor = true;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
+            // 
+            // lblWelcome
+            // 
+            lblWelcome.AutoSize = true;
+            lblWelcome.Location = new Point(12, 9);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(349, 15);
+            lblWelcome.TabIndex = 3;
+            lblWelcome.Text = "Hola {Nombre}, {Apellido}! Selecciona un perfil o crea uno nuevo";
+            // 
+            // btnCrearPerfil
+            // 
+            btnCrearPerfil.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnCrearPerfil.Location = new Point(209, 406);
+            btnCrearPerfil.Name = "btnCrearPerfil";
+            btnCrearPerfil.Size = new Size(75, 32);
+            btnCrearPerfil.TabIndex = 4;
+            btnCrearPerfil.Text = "Crear Perfil";
+            btnCrearPerfil.UseVisualStyleBackColor = true;
+            btnCrearPerfil.Click += btnCrearPerfil_Click;
             // 
             // FormSeleccionarPerfil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(btnCrearPerfil);
+            Controls.Add(lblWelcome);
+            Controls.Add(btnCerrarSesion);
             Controls.Add(btnIngresar);
             Controls.Add(dataGridView1);
             Name = "FormSeleccionarPerfil";
@@ -137,6 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)perfilBindingSource).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -150,6 +176,8 @@
         private DataGridViewCheckBoxColumn activadoDataGridViewCheckBoxColumn;
         private BindingSource perfilBindingSource;
         private Button btnIngresar;
-        private Button button1;
+        private Button btnCerrarSesion;
+        private Label lblWelcome;
+        private Button btnCrearPerfil;
     }
 }

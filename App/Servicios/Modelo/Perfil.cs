@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Servicios.Modelo
 {
     public class Perfil
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPerfil { get; set; }           // PK, Autogenerado, Incremental, Identidad
         public int DNI { get; set; }                // FK a un usuario
         public int TipoPerfil { get; set; }         // Indica el tipo de perfil - 0: Alumno; 1: Docente; 2: Administrador
