@@ -50,6 +50,7 @@
             // 
             // txtDireccion
             // 
+            txtDireccion.Anchor = AnchorStyles.None;
             txtDireccion.Location = new Point(12, 199);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(160, 23);
@@ -57,6 +58,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.Anchor = AnchorStyles.None;
             txtEmail.Location = new Point(12, 145);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(349, 23);
@@ -64,6 +66,7 @@
             // 
             // txtApellido
             // 
+            txtApellido.Anchor = AnchorStyles.None;
             txtApellido.Location = new Point(201, 91);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(160, 23);
@@ -71,6 +74,7 @@
             // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.Location = new Point(201, 181);
             label7.Name = "label7";
@@ -80,6 +84,7 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Location = new Point(12, 127);
             label6.Name = "label6";
@@ -89,6 +94,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Location = new Point(201, 73);
             label1.Name = "label1";
@@ -98,6 +104,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Location = new Point(12, 73);
             label4.Name = "label4";
@@ -107,6 +114,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Location = new Point(12, 181);
             label3.Name = "label3";
@@ -116,6 +124,7 @@
             // 
             // txtNombre
             // 
+            txtNombre.Anchor = AnchorStyles.None;
             txtNombre.Location = new Point(12, 91);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(160, 23);
@@ -123,6 +132,7 @@
             // 
             // txtDNI
             // 
+            txtDNI.Anchor = AnchorStyles.None;
             txtDNI.Location = new Point(12, 37);
             txtDNI.Name = "txtDNI";
             txtDNI.Size = new Size(160, 23);
@@ -130,6 +140,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Location = new Point(12, 19);
             label5.Name = "label5";
@@ -139,6 +150,7 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.Anchor = AnchorStyles.None;
             btnCancelar.Location = new Point(201, 299);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(160, 30);
@@ -149,6 +161,7 @@
             // 
             // btnRegistrarse
             // 
+            btnRegistrarse.Anchor = AnchorStyles.None;
             btnRegistrarse.Location = new Point(12, 299);
             btnRegistrarse.Name = "btnRegistrarse";
             btnRegistrarse.Size = new Size(160, 30);
@@ -159,6 +172,7 @@
             // 
             // txtPass1
             // 
+            txtPass1.Anchor = AnchorStyles.None;
             txtPass1.Location = new Point(201, 253);
             txtPass1.Name = "txtPass1";
             txtPass1.PasswordChar = '*';
@@ -167,6 +181,7 @@
             // 
             // txtPass0
             // 
+            txtPass0.Anchor = AnchorStyles.None;
             txtPass0.Location = new Point(12, 253);
             txtPass0.Name = "txtPass0";
             txtPass0.PasswordChar = '*';
@@ -175,6 +190,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Location = new Point(201, 235);
             label2.Name = "label2";
@@ -184,6 +200,7 @@
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Location = new Point(12, 235);
             label8.Name = "label8";
@@ -193,6 +210,7 @@
             // 
             // dateFechaNacimiento
             // 
+            dateFechaNacimiento.Anchor = AnchorStyles.None;
             dateFechaNacimiento.Format = DateTimePickerFormat.Short;
             dateFechaNacimiento.Location = new Point(201, 199);
             dateFechaNacimiento.MaxDate = new DateTime(2024, 8, 20, 0, 0, 0, 0);

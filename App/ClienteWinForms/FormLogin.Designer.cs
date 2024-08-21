@@ -42,6 +42,7 @@
             // 
             // txtDNI
             // 
+            txtDNI.Anchor = AnchorStyles.None;
             txtDNI.Location = new Point(12, 39);
             txtDNI.Name = "txtDNI";
             txtDNI.Size = new Size(260, 23);
@@ -49,6 +50,7 @@
             // 
             // lblDni
             // 
+            lblDni.Anchor = AnchorStyles.None;
             lblDni.AutoSize = true;
             lblDni.Location = new Point(12, 21);
             lblDni.Name = "lblDni";
@@ -58,6 +60,7 @@
             // 
             // txtPassword
             // 
+            txtPassword.Anchor = AnchorStyles.None;
             txtPassword.Location = new Point(12, 100);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
@@ -66,6 +69,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Location = new Point(12, 82);
             label3.Name = "label3";
@@ -75,6 +79,7 @@
             // 
             // btnLogin
             // 
+            btnLogin.Anchor = AnchorStyles.None;
             btnLogin.Location = new Point(60, 160);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(160, 30);
@@ -85,6 +90,7 @@
             // 
             // lnkOlvidaContraseña
             // 
+            lnkOlvidaContraseña.Anchor = AnchorStyles.None;
             lnkOlvidaContraseña.AutoSize = true;
             lnkOlvidaContraseña.Location = new Point(133, 126);
             lnkOlvidaContraseña.Name = "lnkOlvidaContraseña";
@@ -95,6 +101,7 @@
             // 
             // sep1
             // 
+            sep1.Anchor = AnchorStyles.None;
             sep1.BorderStyle = BorderStyle.Fixed3D;
             sep1.Location = new Point(12, 211);
             sep1.Name = "sep1";
@@ -103,6 +110,7 @@
             // 
             // lblSep
             // 
+            lblSep.Anchor = AnchorStyles.None;
             lblSep.AutoSize = true;
             lblSep.Location = new Point(133, 204);
             lblSep.Name = "lblSep";
@@ -112,6 +120,7 @@
             // 
             // sep2
             // 
+            sep2.Anchor = AnchorStyles.None;
             sep2.BorderStyle = BorderStyle.Fixed3D;
             sep2.Location = new Point(162, 211);
             sep2.Name = "sep2";
@@ -120,6 +129,7 @@
             // 
             // btnCrearCuenta
             // 
+            btnCrearCuenta.Anchor = AnchorStyles.None;
             btnCrearCuenta.Location = new Point(60, 233);
             btnCrearCuenta.Name = "btnCrearCuenta";
             btnCrearCuenta.Size = new Size(160, 30);

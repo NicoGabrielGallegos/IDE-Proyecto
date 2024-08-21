@@ -19,12 +19,6 @@ namespace ClienteWinForms
             InitializeComponent();
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void btnCrearCuenta_Click(object sender, EventArgs e)
         {
             new FormSignIn().Show();
@@ -41,6 +35,11 @@ namespace ClienteWinForms
                 new FormGestionAlumnos().Show();
                 Close();
             }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
