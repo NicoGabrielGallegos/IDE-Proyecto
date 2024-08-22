@@ -28,83 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            dataGridView1 = new DataGridView();
-            idPerfilDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            dNIDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            tipoPerfilDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            legajoDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            idEspecialidadDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            activadoDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
-            perfilBindingSource = new BindingSource(components);
+            dataGridViewPerfiles = new DataGridView();
             btnIngresar = new Button();
             btnCerrarSesion = new Button();
             lblWelcome = new Label();
             btnCrearPerfil = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)perfilBindingSource).BeginInit();
+            btnRecargarPerfiles = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPerfiles).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewPerfiles
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idPerfilDataGridViewTextBoxColumn, dNIDataGridViewTextBoxColumn, tipoPerfilDataGridViewTextBoxColumn, legajoDataGridViewTextBoxColumn, idEspecialidadDataGridViewTextBoxColumn, activadoDataGridViewCheckBoxColumn });
-            dataGridView1.DataSource = perfilBindingSource;
-            dataGridView1.Location = new Point(0, 32);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(800, 361);
-            dataGridView1.TabIndex = 0;
-            // 
-            // idPerfilDataGridViewTextBoxColumn
-            // 
-            idPerfilDataGridViewTextBoxColumn.DataPropertyName = "IdPerfil";
-            idPerfilDataGridViewTextBoxColumn.HeaderText = "IdPerfil";
-            idPerfilDataGridViewTextBoxColumn.Name = "idPerfilDataGridViewTextBoxColumn";
-            idPerfilDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dNIDataGridViewTextBoxColumn
-            // 
-            dNIDataGridViewTextBoxColumn.DataPropertyName = "DNI";
-            dNIDataGridViewTextBoxColumn.HeaderText = "DNI";
-            dNIDataGridViewTextBoxColumn.Name = "dNIDataGridViewTextBoxColumn";
-            dNIDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipoPerfilDataGridViewTextBoxColumn
-            // 
-            tipoPerfilDataGridViewTextBoxColumn.DataPropertyName = "TipoPerfil";
-            tipoPerfilDataGridViewTextBoxColumn.HeaderText = "TipoPerfil";
-            tipoPerfilDataGridViewTextBoxColumn.Name = "tipoPerfilDataGridViewTextBoxColumn";
-            tipoPerfilDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // legajoDataGridViewTextBoxColumn
-            // 
-            legajoDataGridViewTextBoxColumn.DataPropertyName = "Legajo";
-            legajoDataGridViewTextBoxColumn.HeaderText = "Legajo";
-            legajoDataGridViewTextBoxColumn.Name = "legajoDataGridViewTextBoxColumn";
-            legajoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idEspecialidadDataGridViewTextBoxColumn
-            // 
-            idEspecialidadDataGridViewTextBoxColumn.DataPropertyName = "IdEspecialidad";
-            idEspecialidadDataGridViewTextBoxColumn.HeaderText = "IdEspecialidad";
-            idEspecialidadDataGridViewTextBoxColumn.Name = "idEspecialidadDataGridViewTextBoxColumn";
-            idEspecialidadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // activadoDataGridViewCheckBoxColumn
-            // 
-            activadoDataGridViewCheckBoxColumn.DataPropertyName = "Activado";
-            activadoDataGridViewCheckBoxColumn.HeaderText = "Activado";
-            activadoDataGridViewCheckBoxColumn.Name = "activadoDataGridViewCheckBoxColumn";
-            activadoDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // perfilBindingSource
-            // 
-            perfilBindingSource.DataSource = typeof(Servicios.Modelo.Perfil);
+            dataGridViewPerfiles.AllowUserToAddRows = false;
+            dataGridViewPerfiles.AllowUserToDeleteRows = false;
+            dataGridViewPerfiles.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridViewPerfiles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPerfiles.Location = new Point(0, 32);
+            dataGridViewPerfiles.Name = "dataGridViewPerfiles";
+            dataGridViewPerfiles.ReadOnly = true;
+            dataGridViewPerfiles.Size = new Size(800, 361);
+            dataGridViewPerfiles.TabIndex = 0;
             // 
             // btnIngresar
             // 
@@ -147,37 +90,42 @@
             btnCrearPerfil.UseVisualStyleBackColor = true;
             btnCrearPerfil.Click += btnCrearPerfil_Click;
             // 
+            // btnRecargarPerfiles
+            // 
+            btnRecargarPerfiles.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnRecargarPerfiles.Location = new Point(295, 406);
+            btnRecargarPerfiles.Name = "btnRecargarPerfiles";
+            btnRecargarPerfiles.Size = new Size(116, 32);
+            btnRecargarPerfiles.TabIndex = 5;
+            btnRecargarPerfiles.Text = "Recargar Perfiles";
+            btnRecargarPerfiles.UseVisualStyleBackColor = true;
+            btnRecargarPerfiles.Click += btnRecargarPerfiles_Click;
+            // 
             // FormSeleccionarPerfil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnRecargarPerfiles);
             Controls.Add(btnCrearPerfil);
             Controls.Add(lblWelcome);
             Controls.Add(btnCerrarSesion);
             Controls.Add(btnIngresar);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewPerfiles);
             Name = "FormSeleccionarPerfil";
             Text = "FormSeleccionarPerfil";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)perfilBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPerfiles).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn idPerfilDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn dNIDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn tipoPerfilDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn legajoDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn idEspecialidadDataGridViewTextBoxColumn;
-        private DataGridViewCheckBoxColumn activadoDataGridViewCheckBoxColumn;
-        private BindingSource perfilBindingSource;
+        private DataGridView dataGridViewPerfiles;
         private Button btnIngresar;
         private Button btnCerrarSesion;
         private Label lblWelcome;
         private Button btnCrearPerfil;
+        private Button btnRecargarPerfiles;
     }
 }

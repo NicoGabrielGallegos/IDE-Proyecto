@@ -56,18 +56,38 @@ namespace Servicios.Controllers
         [HttpGet("dni/{DNI}")]
         public ActionResult<IEnumerable<Perfil>> GetByUsuarioDNI(int DNI)
         {
-            var perfiles = _context.Perfiles
-                            .Where(p => p.DNI == DNI)
-                            .ToList();
-            if (perfiles.Count() == 0)
-            {
-                return NotFound();
-            }
-            return perfiles;
+            return _context.Perfiles
+                    .Where(p => p.DNI == DNI)
+                    .ToList();
+        }
+
+        [HttpGet("dataGridFormat/{DNI}")]
+        public ActionResult<IEnumerable<object>> GetDataGridViewFormat(int DNI)
+        {
+            return _context.Perfiles
+                    .Where(p => p.DNI == DNI)
+                    .GroupJoin(_context.Especialidades, p => p.IdEspecialidad, e => e.IdEspecialidad,
+                    (p, eList) => new {p, subgroup = eList.AsQueryable()})
+                    .SelectMany(joinedSet => joinedSet.subgroup.DefaultIfEmpty(),
+                    (joinedSet, e) => new { TipoPerfil = joinedSet.p.TipoPerfil == 0 ? "Alumno" : joinedSet.p.TipoPerfil == 1 ? "Docente" : "Administrador",
+                                    Legajo = joinedSet.p.Legajo == null ? "-" : joinedSet.p.Legajo.ToString(),
+                                    Especialidad = e == null ? "-" : e.DescEspecialidad,
+                                    Estado = joinedSet.p.Activado == true ? "Habilitado" : "No habilitado" })
+                    .ToList();
+                /*
+                    .Where(p => p.DNI == DNI)
+                    .Join(_context.Especialidades, p => p.IdEspecialidad, e => e.IdEspecialidad,
+                    (p, e) => new {
+                        TipoPerfil = p.TipoPerfil == 0 ? "Alumno" : p.TipoPerfil == 1 ? "Docente" : "Administrador",
+                        Legajo = p.Legajo == null ? "-" : p.Legajo.ToString(),
+                        Especialidad = e == null ? "-" : e.DescEspecialidad,
+                        Estado = p.Activado == true ? "Habilitado" : "No habilitado" })
+                    .ToList();
+                */
         }
 
         [HttpPost]
-        public ActionResult<Boolean> Create(Perfil perfil)
+        public ActionResult<Perfil> Create(Perfil perfil)
         {
             _context.Perfiles.Add(perfil);
             _context.SaveChanges();
@@ -75,7 +95,7 @@ namespace Servicios.Controllers
         }
 
         [HttpPut("{IdPerfil}")]
-        public ActionResult<Boolean> Update(int IdPerfil, Perfil perfil)
+        public ActionResult<Perfil> Update(int IdPerfil, Perfil perfil)
         {
             if (IdPerfil != perfil.IdPerfil)
             {
@@ -87,7 +107,7 @@ namespace Servicios.Controllers
         }
 
         [HttpDelete("{IdPerfil}")]
-        public ActionResult<Boolean> Delete(int IdPerfil)
+        public ActionResult<Perfil> Delete(int IdPerfil)
         {
             var perfil = _context.Perfiles.Find(IdPerfil);
             if (perfil == null)

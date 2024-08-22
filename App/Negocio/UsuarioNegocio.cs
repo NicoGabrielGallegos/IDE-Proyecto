@@ -24,15 +24,15 @@ namespace Negocio
             return data;
         }
 
-        public async static Task<Boolean> Delete(Usuario usuario)
-        {
-            var response = await Conexion.Instancia.Cliente.DeleteAsync("https://localhost:7187/api/Usuario/" + usuario.DNI);
-            return response.IsSuccessStatusCode;
-        }
-
         public async static Task<Boolean> Add(Usuario usuario)
         {
             var response = await Conexion.Instancia.Cliente.PostAsJsonAsync("https://localhost:7187/api/Usuario", usuario);
+            return response.IsSuccessStatusCode;
+        }
+
+        public async static Task<Boolean> Delete(Usuario usuario)
+        {
+            var response = await Conexion.Instancia.Cliente.DeleteAsync("https://localhost:7187/api/Usuario/" + usuario.DNI);
             return response.IsSuccessStatusCode;
         }
 
