@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Servicios.Modelo
 {
     public class Materia
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdMateria { get; set; }          // PK, Autogenerado, Incremental, Identidad
         public string? DescMateria { get; set; }    // Nombre de la materia
         public int TipoDictado {  get; set; }       // Tipo de dictado de la materia - 0: Anual; 1: 1er Cuatrimestre; 2: 2do Cuatrimestre; 3: 1er/2do Cuatrimestre

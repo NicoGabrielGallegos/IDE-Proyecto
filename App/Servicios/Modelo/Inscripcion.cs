@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Servicios.Modelo
 {
     public class Inscripcion
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdInscripcion { get; set; }  // PK, Autogenerado, Incremental, Identidad
         public int LegajoAlumno { get; set; }   // FK al legajo de un perfil de tipo "Alumno"
         public int IdCurso { get; set; }        // FK al curso al que se inscribe el alumno

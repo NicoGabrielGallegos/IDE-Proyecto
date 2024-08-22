@@ -6,7 +6,7 @@ namespace Servicios.Modelo
     public class Usuario
     {
         [Key]
-        public int DNI { get; set; }                    // PK, Autogenerado, Incremental, Identidad
+        public int DNI { get; set; }                    // PK, Identidad
         public string? Nombre { get; set; }             // Nombre del usuario
         public string? Apellido { get; set; }           // Apellido del usuario
         public string? Email { get; set; }              // Email del usuario
