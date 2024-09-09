@@ -14,16 +14,12 @@ namespace ClienteWinForms
 {
     public partial class NotifSuccess : Form
     {
-        TextBox Nombre;
-        TextBox Apellido;
-        public NotifSuccess(TextBox nombre, TextBox apellido)
-        {
-            Nombre = nombre;
-            Apellido = apellido;
-            InitializeComponent();
-            label2.Text = $"Bienvenido {Nombre.Text}, {Apellido.Text}.";
-        }
 
+        public NotifSuccess(string msg)
+        {
+            InitializeComponent();
+            label1.Text = $"{msg}";
+        }
 
         private void btnAceptar_Click_1(object sender, EventArgs e)
         {
